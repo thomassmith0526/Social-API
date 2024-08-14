@@ -8,7 +8,7 @@ const PORT = 3001
 const app = express()
 
 const activity = cwd.includes('')
-    ? cwd.split('')[]
+    ? cwd.split('')[1]
     : cwd;
 
 app.use(express.urlencoded({ extended: true }))
