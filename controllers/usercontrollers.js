@@ -23,7 +23,7 @@ module.exports = {
         }
     },
 
-    async createUser(req, res) {
+    async createUsers(req, res) {
         try {
             const user = await User.create(req.body);
             res.json(user);
@@ -31,7 +31,7 @@ module.exports = {
             res.status(500).json(err)
         }
     },
-    async deleteUser(req, res) {
+    async deleteUsers(req, res) {
         try{
             const user = await User.findOneAndDelete({ _id: req.params.userId})
 
@@ -46,7 +46,7 @@ module.exports = {
         }
     },
     
-    async updateUser(req, res) {
+    async updateUsers(req, res) {
         try {
             const user = await User.findOneAndUpdate(
                 {_id: req.params.userId},
