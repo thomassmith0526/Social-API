@@ -24,9 +24,9 @@ const email = [
     'myqueen23@yahoo.com',
     'jester564@gmail.com',
 ];
-  const users = [];
+
  
   const getRandomUsername = () => `${usernames}`;
   const getRandomEmail = () => `${email}`;
-  module.exports = getRandomUsername, getRandomEmail
+  module.exports = {getRandomUsername, getRandomEmail}
   
