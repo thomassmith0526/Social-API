@@ -9,15 +9,24 @@ const usernames = [
     'texas1883',
     'fight2024',
     'ousucks1989',
-    
+
   ];
 
-const email =[ 
-
-]
+const email = [ 
+    'yeep@yahoo.com',
+    'heep@gmail.com',
+    'teep@yahoo.com',
+    'rere@outlook.com',
+    'yes1234@gmail.com',
+    'takeover89@gmail.com',
+    'yourgone683@yahoo.com',
+    'myking89@outlook.com',
+    'myqueen23@yahoo.com',
+    'jester564@gmail.com',
+];
   const users = [];
  
   const getRandomUsername = () => `${usernames}`;
-  const getRandomEmail = () => `${email}`
-  module.exports = getRandomUsername, getRandomEmail;
+  const getRandomEmail = () => `${email}`;
+  module.exports = getRandomUsername, getRandomEmail
   
