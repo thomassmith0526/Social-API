@@ -7,12 +7,14 @@ const {
     updateUsers,
 } = require('../../controllers/userControllers.js');
 
-router.route('/').get(getUsers).post(createUsers)
 
-router
-    .route('./:userId')
-    .get(getSingleUser)
-    .delete(deleteUsers)
-    .put(updateUsers);
-   
+router.route('/:userId')
+        .get(getSingleUser)
+        .delete(deleteUsers)
+        .put(updateUsers);
+
+router.route('/')
+      .get(getUsers)
+      .post(createUsers)
+
 module.exports = router;    

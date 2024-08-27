@@ -49,9 +49,6 @@ userSchema
 const User = model('User', userSchema);
 
 
-function getRandomUsername() {
-
-}
 
 
 module.exports = User;

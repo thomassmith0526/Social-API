@@ -11,6 +11,7 @@ module.exports ={
         }
     },
     async getSingleThought(req, res) {
+        console.log("Single Thought Route: ", req.params)
         try {
             const thought = await Thought.findOne({_id:req.params.thoughtId})
             .populate('user')
@@ -18,6 +19,7 @@ module.exports ={
             if(!thought) {
                 return res.status(404).json({ message: 'No thought with that Id'})
             }
+             res.status(200).json(user)   
         } catch (err) {
             res.status(500).json(err)
         }
@@ -25,6 +27,10 @@ module.exports ={
     async createThoughts(req, res) {
         try {
             const thought = await Thought.create(req.body);
+
+            // we want to ASSOCIATE the newThought with the CURRENT USER
+            // --> query the current user (req.body)
+            // --> once found we ADD($push: { thoughts: newThought._id}) the newThought._id to our USER.thoughts
             res.json(thought);
         } catch (err) {
             res.status(500).json(err)
