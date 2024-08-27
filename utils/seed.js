@@ -20,23 +20,22 @@ connection.once('open', async () => {
 
     const users = [];
 
-   // for (let i = 0; i < 9; i++) {
     for (let i = 0; i < usernames.length; i++) {
-        // const thoughts = getRandomThoughts();
+     
         const username = getRandomUsername();
         const email = getRandomEmail();
 
         users.push({
             username,
             email,
-            // thoughts,
+
         })
     }
     console.log("User Array: ", users);
 
     await User.insertMany(users);
     console.table(users)
-    //console.log(users)
+
     process.exit(0);
 });
   

@@ -9,8 +9,7 @@ const{
 
 router.route('/').get(getThoughts).post(createThoughts);
 
-router
-    .route('/:thoughtId')
+router.route('/:thoughtId')
     .get(getSingleThought)
     .delete(deleteThoughts)
     .put(updateThoughts);

@@ -13,11 +13,11 @@ module.exports = {
         }
     },
     async getSingleUser(req, res) {
-        //console.log("Req Params: ", req.params);  // { userId: ""}
+
         try {
             const user = await User.findOne({ _id: req.params.userId })
                 .populate('thoughts')
-            //console.log("Found: ", user);
+
             if (!user) {
                 return res.status(404).json({ message: 'No user with that Id' })
             }
